@@ -3,3 +3,25 @@
 	width: 100%;
 	margin: 0 auto;
 }
+
+.header {
+	padding: 0.5rem 0;
+	background-color: #f8f9fa;
+}
+
+.footer {
+	padding: 1rem 0;
+	background-color: #f8f9fa;
+}
+
+	.footer p {
+		margin-bottom: 0;
+	}
+
+.navbar-expand-md .navbar-nav .nav-link {
+	padding: 0 1rem;
+}
+
+.main-content {
+	padding: 50px 0;
+}
