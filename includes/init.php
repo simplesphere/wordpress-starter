@@ -7,21 +7,24 @@
 function theme_setup()  {
 
 	if ( ! isset($content_width) ) {
-		$content_width = 1200;
+		$content_width = 1140;
 	}
 
+	// Woocommerce Support
+	add_theme_support( 'woocommerce' );
+
 	// Add theme support for Post Formats
-		add_theme_support( 'post-formats', array(
-			'aside',
-			'gallery',
-			'link',
-			'image',
-			'quote',
-			'status',
-			'video',
-			'audio',
-			'chat'
-		));
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'gallery',
+		'link',
+		'image',
+		'quote',
+		'status',
+		'video',
+		'audio',
+		'chat'
+	));
 
 	// Add theme support for Featured Images
 	add_theme_support( 'post-thumbnails' );

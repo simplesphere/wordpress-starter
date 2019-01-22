@@ -9,3 +9,4 @@ require get_template_directory() . '/includes/image-size.php';
 require get_template_directory() . '/includes/enqueues.php';
 require get_template_directory() . '/includes/navbar.php';
 require get_template_directory() . '/includes/index-pagination.php';
+require get_template_directory() . '/includes/woocommerce.php';
