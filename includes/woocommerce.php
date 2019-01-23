@@ -145,6 +145,8 @@ if ( ! function_exists( 'woocommerce_wrapper_before' ) ) {
 		?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
+				<div class="container">
+					<div class="row">
 			<?php
 	}
 }
@@ -160,6 +162,8 @@ if ( ! function_exists( 'dd_woocommerce_wrapper_after' ) ) {
 	 */
 	function dd_woocommerce_wrapper_after() {
 			?>
+					</div>
+				</div>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 		<?php

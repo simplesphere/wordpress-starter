@@ -10,9 +10,6 @@ function theme_setup()  {
 		$content_width = 1140;
 	}
 
-	// Woocommerce Support
-	add_theme_support( 'woocommerce' );
-
 	// Add theme support for Post Formats
 	add_theme_support( 'post-formats', array(
 		'aside',

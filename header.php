@@ -15,8 +15,8 @@
 
 <body <?php body_class(); ?>>
   <a class="sr-only sr-only-focusable" href="#content"><?php echo esc_html_x('Skip to content', 'Content', 'simplesphere'); ?></a>
-  <header class="header">
-    <div class="container-fluid">
+  <header id="header">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <nav class="navbar navbar-expand-md">
@@ -37,8 +37,8 @@
                 ) );
               ?>
             </div>
-          </nav>        
-        </div>        
+          </nav>
+        </div>
       </div>
     </div>
   </header>
