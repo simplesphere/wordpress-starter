@@ -10,11 +10,11 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package simplesphere
- */ 
+ */
 get_header(); ?>
 
 <main id="primary" class="main-content">
-	<div class="container-fluid">
+	<div class="container">
 	  <div class="row">
 	    <div class="col-md-8">
 	      <section id="content" class="home-listing" role="main">

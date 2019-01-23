@@ -1,3 +1,228 @@
+/* --------------------------------------
+Resets
+-----------------------------------------*/
+*,*:after,*::before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html{font-size:100%;-webkit-font-smoothing:antialiased}
+html,body{position:relative;width:100%;height:100%}
+body{font-size:1em;line-height:1.6;-webkit-text-size-adjust:none;font-weight:500}
+a{color:#d20e3f;text-decoration:none;transition:all .3s}
+a:hover{text-decoration:none}
+a:focus{outline:0;outline-offset:0;text-decoration:none}
+iframe{border:0}
+ul{list-style:square}
+img{max-width:100%;height:auto}
+hr{border:0}
+a:active, a:hover, a:focus {color: #d4622e;}
+/* --------------------------------------
+Global Styles & Typography
+-----------------------------------------*/
+html *{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:'Montserrat',sans-serif;line-height:28px;color:#333;font-size:14px;overflow-x:hidden;position:relative; font-weight: 500;}
+input, textarea{font-family:'Poppins',sans-serif;color:#a6a6a6;font-size:1rem;}
+iframe{width:100%;height:100%;height:400px}
+hr{margin:30px auto;padding:0;height:1px;background-color:rgba(0,0,0,0.05);width:100%}
+hr.white{background-color:rgba(255,255,255,0.3)}
+p{color:#444;margin:0 0 20px}
+h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif;margin:0 0 20px;color:#402a41;font-weight:bold}
+h1,h2,h3{font-family:'Poppins'}
+h1{font-size:4rem}
+h2{font-size:2.5rem}
+h3{font-size:1.7rem}
+h4{font-size:1.2rem}
+h5{font-size:.95rem;line-height:1.5rem}
+blockquote{border-radius:4px;text-align:center;position:relative; font-family: 'Georgia'; font-size: 1.4rem; line-height: 2.6rem; font-weight: normal;}
+blockquote h4 {display: inline-block; border-top: 1px solid rgba(255,255,255, 0.3); padding-top: 15px;}
+
+/* --------------------------------------
+Address
+-----------------------------------------*/
+address{line-height:2rem;margin-bottom:0;padding-bottom:0}
+address strong{min-width:20%;display:inline-block}
+address span{display:block}
+
+/* --------------------------------------
+Color resets
+-----------------------------------------*/
+.page-item.active .page-link{background-color:#d20e3f;border-color:#d20e3f}
+.nav-pills .nav-item.show .nav-link,.nav-pills .nav-link.active{background-color:#d20e3f}
+
+/* --------------------------------------
+Classes
+-----------------------------------------*/
+.overlay{background-color:rgba(29,155,212,0.83);background-color:rgba(39,61,79,0.75);height:100%;position:absolute;top:0;left:0;width:100%;height:100%}
+.dark-overlay {height:100%;position:absolute;top:0;left:0;width:100%;height:100%;background-color: rgba(64, 42, 65, 0.85);}
+.section{padding: 70px 0}
+.small-section{padding:40px 0}
+.vcenter{display:flex;align-items:center}
+.img-center{display:block;margin:0 auto}
+.relative{position:relative}
+.hidden {display: none;}
+.shadow {box-shadow: 0px 20px 60px 0px rgba(9,9,9,0.25);}
+.nomargin-b {margin-bottom: 0;}
+
+
+/* --------------------------------------
+Margins & Paddings
+-----------------------------------------*/
+.m-60{margin:60px auto}
+.mb-30{margin-bottom:20px}
+.mt-30{margin-top:30px}
+.mt-50 {margin-top: 50px;}
+.pt-80{padding-top:80px}
+.pb-80{padding-bottom:80px}
+.pt-60{padding-top:60px}
+.pb-30{padding-bottom:30px}
+.pb-60{padding-bottom:60px}
+.p-20{padding:20px 0}
+.p-30{padding:30px 0}
+.p-40{padding:40px 0}
+.pr-30{padding-right:30px}
+.pl-30{padding-left:30px}
+.pl-40 {padding-left: 40px;}
+.bl-grey{border-left:1px solid #ededed}
+.mb-6 {margin-bottom: 6rem;}
+
+/* --------------------------------------
+Text Classes
+-----------------------------------------*/
+.white-text h2,.white-text h4,.white-text strong,.white-text h5,.white-text i, .white-text {color:#FFF!important}
+.white-text h3,.white-text p,.white-text li,.white-text address,.white-text a{color:rgba(255,255,255,0.8)!important}
+.white-text i.orange{color:#d20e3f!important}
+.semi-white p, .semi-white {color: rgba(255,255,255,0.8);}
+
+.headline{margin-bottom:50px}
+.headline h2 {font-size: 2.2rem;}
+.headline-line{position:relative;overflow:hidden;padding-bottom:10px}
+.headline-line:after{content:'';position:absolute;width:100%;height:1px;background-color:#ededed;margin-left:30px;margin-right:30px;top:15px}
+.headline-center{margin-bottom:4rem}
+.headline-center h3{position:relative; padding:0 10px;padding-bottom:10px;text-align:center;display:block;font-size:2.2rem;text-transform:capitalize}
+.headline-center h3:after {content: ''; position: absolute; width: 50px; height: 5px; background-color: #d20e3f; left: calc(50% - 50px); bottom: -10px;}
+
+/* --------------------------------------
+Buttons
+-----------------------------------------*/
+.btn{ padding: 10px 25px; background-color: #402a41; color: #FFF; font-weight: bold; font-family: inherit; font-size: inherit; border-radius: 4px;}
+.btn-small{font-size:1rem}
+.btn:hover, .btn:focus, .btn:active{background-color:#1a1a1a;color:#FFF}
+.btn-dark{background-color:#1a1a1a}
+.btn-full{width:100%}
+
+/* --------------------------------------
+Form Resets / Modal
+-----------------------------------------*/
+.form-control{font-size:.85rem; padding:15px;border-radius:4px;border:1px solid rgba(0,0,0,0.1);margin-bottom: 1rem;}
+.modal-header {padding: 1rem 2rem; background: #402a41; border-radius: 4px 4px 0 0;}
+.modal-header h4 {color: #FFF;margin-bottom: 0;}
+.modal-body {padding: 2rem;}
+.close {color: #FFF; text-shadow: none;opacity: 1;}
+.close:hover{color:#FFF;}
+select.form-control:not([size]):not([multiple]){height:auto;font-family:inherit;padding:10px 20px}
+.btn-submit{background-color:#d20e3f;display:block;padding:1rem;border:1px solid rgba(0,0,0,0.1);font-family:inherit;text-transform:capitalize;font-weight:bold;width:100%;}
+.btn-submit:hover{cursor:pointer;background-color:#1a1a1a;border:1px solid rgba(0,0,0,0.1)}
+
+/* --------------------------------------
+Backgrounds
+-----------------------------------------*/
+.bg-cover{-webkit-background-size:cover;background-size:cover;background-repeat: no-repeat;}
+.bg-fixed{background-attachment:fixed}
+.bg-grey {background-color: #fbfbfb;}
+
+/* --------------------------------------
+Social
+-----------------------------------------*/
+.social { margin: 0; padding: 0; margin-bottom: 0.5rem;}
+  .social li { display: inline-block; text-align: center; }
+  .social li i { font-size: 18px; color: #fff; border-radius: 3px; background: #ddd; margin: 2px; width: 30px; height: 30px; line-height: 30px; display: block; transition: all 0.2s ease-out; }
+    .social li .icon:hover {background: #1a1a1a;}
+  .social .ion-social-twitter-outline {background: #00aced;}
+  .social .ion-social-facebook {background: #3b5998;}
+  .social .ion-social-dribbble-outline {background: #ea4c89;}
+  .social .ion-social-googleplus-outline {background: #dd4b39;}
+  .social .ion-social-linkedin-outline {background: #007bb6;}
+  .social .ion-social-instagram-outline {background: #517fa4;}
+  .social .ion-social-pinterest-outline {background: #cb2027;}
+.social-nav {margin-bottom: 0; display: flex;}
+
+/* --------------------------------------
+Navigation
+-----------------------------------------*/
+.navigation {background-color: #FFF;}
+.navbar{width:100%;background:none!important}
+.navbar .navbar-toggler{cursor:pointer;outline:0}
+.navbar-inverse .navbar-nav .nav-link{color:#000;}
+.navbar .nav-item{padding:0 .5rem}
+.navbar-inverse .navbar-toggler-icon{background-image:none;background:#FFF;height:3px;display:block;margin-bottom:4px}
+.navbar-brand{text-transform:uppercase;font-size:28px;font-weight:bold}
+.fixed-navbar,.fixed-nav{background-color:#FFF;position:fixed;width:100%;top:0;left:0;z-index:50;padding:15px 0;box-shadow:0 2px 8px 0 rgba(50,50,50,0.08);transition:.3s all}
+.fixed-navbar .navbar-inverse .navbar-nav .nav-link,.fixed-nav .navbar-inverse .navbar-nav .nav-link{color:#402a41}
+.fixed-navbar .navbar-inverse .navbar-brand,.fixed-navbar .navbar-inverse .navbar-toggler,.fixed-nav .navbar-inverse .navbar-brand,.fixed-nav .navbar-inverse .navbar-toggler{color:#402a41}
+.fixed-navbar .navbar-inverse .navbar-nav .nav-link.active,.fixed-nav .navbar-inverse .navbar-nav .nav-link.active{color:#1d9bd4}
+.fixed-navbar .navbar-inverse .navbar-nav .nav-link.request-a-quote{color:#FFF}
+.fixed-navbar .navbar-inverse .navbar-toggler-icon{background-color:#402a41}
+.navbar-inverse .navbar-toggler{border-color:transparent}
+
+/* --------------------------------------
+Page Header
+-----------------------------------------*/
+#page-header {background-color: #402a41;padding:2.5rem 0; padding-top: 110px; background-image: url(../images/cape-town2.jpg); position: relative; background-repeat: no-repeat; background-size: cover; background-position: center bottom;}
+#page-header:after {content: '';height:100%;position:absolute;top:0;left:0;width:100%;background-color: rgba(210, 14, 63, 0.8);}
+#page-header .container {position: relative; z-index: 2;}
+#page-header h2 {color: #FFF; margin-bottom: 10px;}
+#page-header h2 {text-transform: capitalize;}
+#page-header h4 {color: rgba(255, 255, 255, 0.65); font-size: inherit; margin-bottom: 15px;}
+#page-header h4 span {margin-right: 10px; position: relative;}
+#page-header h4 .article-meta__link:after {content: '';}
+#page-header h4 a {color: #FFF;}
+#page-header h5 {font-size: inherit; margin-bottom: 0;}
+#page-header h5 a {margin-bottom: 0; font-size: inherit;display: inline-block; text-transform: capitalize; margin-right: 10px; background-color: #FFF; border-radius: 3px; padding: 5px 10px;}
+
+#page-header address {justify-content: center; margin: 15px 0;}
+#page-header address span {display: flex;}
+#page-header address strong {color: #FFF; width: inherit; display: flex; margin-right: 10px;}
+#page-header address a {color: rgba(255,255,255,0.75);}
+
+/* --------------------------------------
+Layout
+-----------------------------------------*/
+#header {padding: 1rem 0; background-color: #F8F8F8; border-bottom: 1px solid #DDD;}
+#primary {}
+#sidebar {}
+#footer {}
+
+/* --------------------------------------
+Footer
+-----------------------------------------*/
+.footer i{margin:0 5px;font-size:1rem;margin-right:15px}
+.footer{font-weight:300}
+.footer p{margin-bottom:0;color:rgba(255,255,255,0.8)}
+.footer a{color:#FFF;border-bottom:1px solid #FFF;transition:.3s all}
+.footer a.noborder{border-bottom:0}
+.footer a:hover{border-bottom:1px solid rgba(0,0,0,0.2)}
+.footer-logo{max-width:70px;border:0;margin-left:10px}
+.footer-top{background-color:#402a41;padding:50px 0;padding-bottom:40px}
+.footer-top p{margin-bottom:1.5rem}
+.footer-bottom{background-color:#101010;padding:20px 0}
+.footer h4{color:#FFF}
+.footer li{padding:0;margin:0;padding:4px 0}
+
+/* --------------------------------------
+Slick
+-----------------------------------------*/
+.slick-next{right: 0;}
+.slick-prev{left: inherit; right: 40px;}
+.slick-next,.slick-prev{width:30px;height:30px;background-color:#DDD;border:1px solid rgba(0,0,0,0.01);transform:translateY(calc(50% - 50px));border-radius:4px;line-height: 0;text-align:center;z-index:2; top: 0; transition: 0.3s all;}
+.slick-next:hover,.slick-prev:hover{background-color: #d20e3f;}
+.slick-next:before,.slick-prev:before{font-family:Ionicons;font-size:1rem;color:#FFF;opacity:1;left:0;right:0}
+.slick-prev:before{content:"\f2ca"}
+.slick-next:before{content:"\f30f"}
+
+.slick-dots{display:flex;justify-content:center;margin:0;padding:1rem 0;list-style-type:none}
+.slick-dots li{margin:0 .25rem}
+.slick-dots button{display:block;padding:0;border:0;border-radius:50%;text-indent:-9999px}
+.slick-dots li button:before {background-color: #d20e3f; opacity: 0.8; border-radius: 50%;width:15px;height:15px;}
+.slick-dots li.slick-active button:before {opacity: 1; background-color: #d20e3f;}
+
+
 .container-fluid {
 	max-width: 1280px;
 	width: 100%;
