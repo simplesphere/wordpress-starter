@@ -17,9 +17,7 @@ get_header(); ?>
 	      </section>
 	    </div>
 	    <div class="col-md-4">
-	    	<aside id="sidebar" class="sidebar-right">
 	    	<?php get_sidebar(); ?>
-	    	</aside>
 	    </div>
 	  </div>
 	</div>

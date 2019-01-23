@@ -4,8 +4,7 @@ Resets
 *,*:after,*::before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{font-size:100%;-webkit-font-smoothing:antialiased}
 html,body{position:relative;width:100%;height:100%}
-body{font-size:1em;line-height:1.6;-webkit-text-size-adjust:none;font-weight:500}
-a{color:#d20e3f;text-decoration:none;transition:all .3s}
+a{color:#4099de;text-decoration:none;transition:all .3s}
 a:hover{text-decoration:none}
 a:focus{outline:0;outline-offset:0;text-decoration:none}
 iframe{border:0}
@@ -17,12 +16,12 @@ a:active, a:hover, a:focus {color: #d4622e;}
 Global Styles & Typography
 -----------------------------------------*/
 html *{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-body{font-family:'Montserrat',sans-serif;line-height:28px;color:#333;font-size:14px;overflow-x:hidden;position:relative; font-weight: 500;}
+body{font-family:'Montserrat',sans-serif;line-height:28px;color:#4c5c69;font-size:15px;overflow-x:hidden;position:relative; font-weight: 500;}
 input, textarea{font-family:'Poppins',sans-serif;color:#a6a6a6;font-size:1rem;}
 iframe{width:100%;height:100%;height:400px}
 hr{margin:30px auto;padding:0;height:1px;background-color:rgba(0,0,0,0.05);width:100%}
 hr.white{background-color:rgba(255,255,255,0.3)}
-p{color:#444;margin:0 0 20px}
+p{margin:0 0 20px}
 h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif;margin:0 0 20px;color:#402a41;font-weight:bold}
 h1,h2,h3{font-family:'Poppins'}
 h1{font-size:4rem}
@@ -164,29 +163,20 @@ Navigation
 /* --------------------------------------
 Page Header
 -----------------------------------------*/
-#page-header {background-color: #402a41;padding:2.5rem 0; padding-top: 110px; background-image: url(../images/cape-town2.jpg); position: relative; background-repeat: no-repeat; background-size: cover; background-position: center bottom;}
-#page-header:after {content: '';height:100%;position:absolute;top:0;left:0;width:100%;background-color: rgba(210, 14, 63, 0.8);}
+#page-header {background-color: #402a41;padding:5rem 0;position: relative; background-repeat: no-repeat; background-size: cover; background-position: center bottom;}
+#page-header:after {content: '';height:100%;position:absolute;top:0;left:0;width:100%;background-color: rgba(38, 66, 95, 0.8);}
 #page-header .container {position: relative; z-index: 2;}
-#page-header h2 {color: #FFF; margin-bottom: 10px;}
-#page-header h2 {text-transform: capitalize;}
-#page-header h4 {color: rgba(255, 255, 255, 0.65); font-size: inherit; margin-bottom: 15px;}
-#page-header h4 span {margin-right: 10px; position: relative;}
-#page-header h4 .article-meta__link:after {content: '';}
-#page-header h4 a {color: #FFF;}
-#page-header h5 {font-size: inherit; margin-bottom: 0;}
-#page-header h5 a {margin-bottom: 0; font-size: inherit;display: inline-block; text-transform: capitalize; margin-right: 10px; background-color: #FFF; border-radius: 3px; padding: 5px 10px;}
-
-#page-header address {justify-content: center; margin: 15px 0;}
-#page-header address span {display: flex;}
-#page-header address strong {color: #FFF; width: inherit; display: flex; margin-right: 10px;}
-#page-header address a {color: rgba(255,255,255,0.75);}
+#page-header h2 {color: #FFF; font-size: 3rem; margin-bottom: 0;position:relative;text-transform: capitalize;}
+#page-header h2 span {padding: 0 1.5rem; position: relative;}
+#page-header h2:before, #page-header h2:after {font-size: 1rem;content: '';display: inline-block;vertical-align: middle;width: 10%; max-width: 6rem; height: 3px;background: #FFF;position: relative;}
 
 /* --------------------------------------
 Layout
 -----------------------------------------*/
-#header {padding: 1rem 0; background-color: #F8F8F8; border-bottom: 1px solid #DDD;}
-#primary {}
+#header {padding: 1rem 0; border-bottom: 1px solid #E8E8E8;}
+#primary {padding: 4rem 0;}
 #sidebar {}
+	#sidebar h3 {font-size: 1.3rem;}
 #footer {}
 
 /* --------------------------------------
@@ -199,9 +189,10 @@ Footer
 .footer a.noborder{border-bottom:0}
 .footer a:hover{border-bottom:1px solid rgba(0,0,0,0.2)}
 .footer-logo{max-width:70px;border:0;margin-left:10px}
-.footer-top{background-color:#402a41;padding:50px 0;padding-bottom:40px}
+.footer-top{background-color:#F8F8F8;padding:50px 0;padding-bottom:40px}
 .footer-top p{margin-bottom:1.5rem}
-.footer-bottom{background-color:#101010;padding:20px 0}
+.footer-bottom{background-color:#26425f;padding:2rem 0}
+.footer-bottom p{margin-bottom: 0; color: #FFF;}
 .footer h4{color:#FFF}
 .footer li{padding:0;margin:0;padding:4px 0}
 
@@ -223,30 +214,4 @@ Slick
 .slick-dots li.slick-active button:before {opacity: 1; background-color: #d20e3f;}
 
 
-.container-fluid {
-	max-width: 1280px;
-	width: 100%;
-	margin: 0 auto;
-}
 
-.header {
-	padding: 0.5rem 0;
-	background-color: #f8f9fa;
-}
-
-.footer {
-	padding: 1rem 0;
-	background-color: #f8f9fa;
-}
-
-	.footer p {
-		margin-bottom: 0;
-	}
-
-.navbar-expand-md .navbar-nav .nav-link {
-	padding: 0 1rem;
-}
-
-.main-content {
-	padding: 50px 0;
-}

@@ -1,3 +1,11 @@
+<?php
+/**
+ * The template for displaying the footer
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * @package simplesphere
+ */
+?>
+
   <footer id="footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
     <div class="footer-top">
       <div class="container">
@@ -10,7 +18,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></p>
+            <p>&copy; <?php echo date('Y'); ?> - <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></p>
           </div>
         </div>
       </div>

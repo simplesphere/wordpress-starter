@@ -14,7 +14,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <a class="sr-only sr-only-focusable" href="#content"><?php echo esc_html_x('Skip to content', 'Content', 'simplesphere'); ?></a>
+  <a class="sr-only sr-only-focusable" href="#primary"><?php echo esc_html_x('Skip to content', 'Content', 'simplesphere'); ?></a>
   <header id="header">
     <div class="container">
       <div class="row">
@@ -42,5 +42,22 @@
       </div>
     </div>
   </header>
+
+  <?php if ( is_single() || is_page() || is_woocommerce()) { ?>
+    <section id="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2><span>
+              <?php if(!is_woocommerce()) {echo get_the_title(); } ?>
+              <?php if(is_woocommerce()) {woocommerce_page_title(); } ?>
+            </span></h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  <?php }?>
+
+
 
 
