@@ -37,7 +37,13 @@
                 ) );
               ?>
             </div>
+            <?php
+              if ( function_exists( 'woocommerce_header_cart' ) ) {
+                woocommerce_header_cart();
+              }
+            ?>
           </nav>
+
         </div>
       </div>
     </div>
@@ -49,15 +55,18 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <h2><span>
-              <?php if(!is_woocommerce()) {echo get_the_title(); } ?>
-              <?php if(is_woocommerce()) {woocommerce_page_title(); } ?>
+              <?php if(!is_shop()) {echo get_the_title(); } ?>
+              <?php if(is_shop()) {woocommerce_page_title(); } ?>
             </span></h2>
+            <?php if(is_woocommerce()) {
+              woocommerce_breadcrumb();
+              }
+            ?>
           </div>
         </div>
       </div>
     </section>
   <?php }?>
-
 
 
 
