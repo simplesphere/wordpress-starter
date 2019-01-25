@@ -59,12 +59,12 @@ function woocommerce_listing_columns( $classes, $class = '', $post_id = '' ) {
   // Check if current product is in single view.
   // Important to prevent conflict if other loops are on single product (ex. related products).
   if ( ! is_single( $post_id ) && in_array( 'product', $classes, true ) ) {
-    $per_row = 3;
+    $per_row = 2;
 
     $column_width = '-' . ( 12 / $per_row );
 
     // Column responsive breakpoint.
-    $breakpoint = get_theme_mod( 'wc_product_column_breakpoint', 'md' );
+    $breakpoint = 'md';
 
     if ( '' !== $breakpoint ) {
       $column_breakpoint = '-' . $breakpoint;
@@ -131,16 +131,14 @@ function woocommerce_loop_columns() {
 }
 add_filter( 'loop_shop_columns', 'woocommerce_loop_columns' );
 
-
 /**
  * Product columns wrapper.
  */
 function woocommerce_product_columns_wrapper() {
   $columns = woocommerce_loop_columns();
-  echo '<div class="col-wrap-' . absint( $columns ) . '">';
+  echo '<div class="product-columns-' . absint( $columns ) . '">';
 }
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_product_columns_wrapper', 40 );
-
 
 /**
  * Product columns wrapper close.
@@ -150,6 +148,56 @@ function woocommerce_product_columns_wrapper_close() {
 }
 
 add_action( 'woocommerce_after_shop_loop', 'woocommerce_product_columns_wrapper_close', 40 );
+
+/**
+ * Remove the breadcrumbs
+ */
+function woocommerce_remove_breadcrumbs() {
+  remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
+add_action( 'init', 'woocommerce_remove_breadcrumbs' );
+
+/**
+ * Remove default loop title
+ */
+remove_action( 'woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10 );
+
+/**
+ * Product loop H2 to H4
+ */
+function change_loop_title() {
+  echo '<h4>' . get_the_title() . '</h4>';
+}
+add_action('woocommerce_shop_loop_item_title', 'change_loop_title', 10 );
+
+/**
+ * Product loop li start
+ */
+function loop_add_wrap () {
+  echo '<div class="product-listing__single">';
+}
+add_action ( "woocommerce_before_shop_loop_item", "loop_add_wrap", 9 );
+
+/**
+ * Product loop li end
+ */
+function loop_add_wrap_end () {
+  echo '</div>';
+}
+add_action ( "woocommerce_after_shop_loop_item", "loop_add_wrap_end", 10 );
+
+
+
+/**
+ * Remove sidebar woocommerce
+ */
+function remove_sidebar() {
+  if( is_checkout() || is_cart() || is_product()) {
+    remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+  }
+}
+add_action('woocommerce_before_main_content', 'remove_sidebar' );
+
 
 
 // function woocommerce_product_loop_start() {

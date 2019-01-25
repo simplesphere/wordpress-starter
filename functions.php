@@ -10,4 +10,6 @@ require get_template_directory() . '/includes/enqueues.php';
 require get_template_directory() . '/includes/navbar.php';
 require get_template_directory() . '/includes/index-pagination.php';
 require get_template_directory() . '/includes/woocommerce.php';
+require get_template_directory() . '/includes/woocommerce-cart.php';
+require get_template_directory() . '/includes/woocommerce-checkout.php';
 require get_template_directory() . '/includes/widgets.php';

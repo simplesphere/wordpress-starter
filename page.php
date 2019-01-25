@@ -15,13 +15,10 @@ get_header(); ?>
 <main id="primary" class="main-content">
 	<div class="container">
 	  <div class="row">
-	    <div class="col-md-8">
-	      <section id="content" class="home-listing" role="main">
+	    <div class="col-md-12">
+	      <section id="content" role="main">
 	      <?php get_template_part('templates/loops/page-content'); ?>
 	      </section>
-	    </div>
-	    <div class="col-md-4">
-	    	<?php dynamic_sidebar('page-sidebar'); ?>
 	    </div>
 	  </div>
 	</div>

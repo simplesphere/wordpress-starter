@@ -55,7 +55,9 @@ do_action( 'woocommerce_before_main_content' );
           <?php wc_get_template( 'loop/no-products-found.php' ); ?>
       <?php endif; ?>
     </div>
-    <?php dynamic_sidebar('product-sidebar'); ?>
+    <div class="col-md-4">
+      <?php dynamic_sidebar('product-sidebar'); ?>
+    </div>
   </div>
 </div>
 
