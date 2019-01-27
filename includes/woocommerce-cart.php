@@ -11,7 +11,7 @@ if ( ! function_exists( 'woocommerce_cart_link_fragment' ) ) {
   function woocommerce_cart_link_fragment( $fragments ) {
     ob_start();
     woocommerce_cart_link();
-    $fragments['a.cart-contents'] = ob_get_clean();
+    $fragments['cart-content'] = ob_get_clean();
     return $fragments;
   }
 }
@@ -27,20 +27,22 @@ if ( ! function_exists( 'woocommerce_cart_link' ) ) {
    */
   function woocommerce_cart_link() {
     ?>
-    <a class="nav-link cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'dd' ); ?>">
+    <div class="cart-content" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'dd' ); ?>">
       <?php
       $item_count_text = sprintf(
         /* translators: number of items in the mini cart. */
-        _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'dd' ),
+        _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'dd' ),
         WC()->cart->get_cart_contents_count()
       );
       ?>
-      <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
-    </a>
+      <div class="header-cart">
+        <i class="la la-shopping-cart"></i>
+        <span class="count badge badge-info"><?php echo esc_html( $item_count_text ); ?></span>
+      </div>
+    </div>
     <?php
   }
 }
-
 
 if ( ! function_exists( 'woocommerce_header_cart' ) ) {
   /**
@@ -55,20 +57,19 @@ if ( ! function_exists( 'woocommerce_header_cart' ) ) {
       $class = '';
     }
     ?>
-    <ul id="site-header-cart" class="site-header-cart">
-      <li class="header-cart-link <?php echo esc_attr( $class ); ?>">
+    <div class="dropdown">
+      <a class="header-cart" data-toggle="dropdown">
         <?php woocommerce_cart_link(); ?>
-      </li>
-      <li>
-        <?php
+      </a>
+      <div class="dropdown-menu dropdown-menu-right header-cart-dropdown">
+      <?php
         $instance = array(
           'title' => '',
         );
-
         the_widget( 'WC_Widget_Cart', $instance );
-        ?>
-      </li>
-    </ul>
+      ?>
+      </div>
+    </div>
     <?php
   }
 }

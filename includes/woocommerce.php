@@ -27,7 +27,7 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
  * WooCommerce specific scripts & stylesheets.
  */
 function woocommerce_scripts() {
-  wp_enqueue_style( 'dd-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.css' );
+  wp_enqueue_style( 'woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.css' );
   $font_path   = WC()->plugin_url() . '/assets/fonts/';
   $inline_font = '@font-face {
       font-family: "star";
@@ -39,7 +39,7 @@ function woocommerce_scripts() {
       font-weight: normal;
       font-style: normal;
     }';
-  wp_add_inline_style( 'dd-woocommerce-style', $inline_font );
+  wp_add_inline_style( 'woocommerce-style', $inline_font );
 }
 add_action( 'wp_enqueue_scripts', 'woocommerce_scripts' );
 
@@ -51,6 +51,17 @@ function woocommerce_active_body_class( $classes ) {
   return $classes;
 }
 add_filter( 'body_class', 'woocommerce_active_body_class' );
+
+
+/**
+ * Change the breadcrumb separator
+ */
+function woocommerce_change_breadcrumb ( $defaults ) {
+  $defaults['delimiter'] = ' <span class="breadcrumb-separator">&gt;</span>';
+  return $defaults;
+}
+add_filter( 'woocommerce_breadcrumb_defaults',  'woocommerce_change_breadcrumb', 20 );
+
 
 /**
  * Add column width and whatever other additional CSS classes to products in loop.
@@ -197,6 +208,11 @@ function remove_sidebar() {
   }
 }
 add_action('woocommerce_before_main_content', 'remove_sidebar' );
+
+
+
+
+
 
 
 
